@@ -40,21 +40,26 @@ class Post extends Model
 
      public function save()
      {
-          $pel_id_gol = $_POST['pel_id_gol'];
+          $gol_id = $_POST['gol_id'];
           $pel_name = $_POST['pel_name'];
+          $pel_no = $_POST['pel_no'];
           $pel_alamat = $_POST['pel_alamat'];
           $pel_hp = $_POST['pel_hp'];
           $pel_ktp = $_POST['pel_ktp'];
           $pel_seri = $_POST['pel_seri'];
           $pel_meteran = $_POST['pel_meteran'];
           $pel_aktif = $_POST['pel_aktif'];
+          $user_id = $_POST['user_id'];
 
           $sql = "INSERT INTO tb_pelanggan
-            SET pel_id_gol=:pel_id_gol, pel_name=:pel_name, pel_alamat=:pel_alamat, pel_hp=:pel_hp
-            , pel_ktp=:pel_ktp, pel_seri=:pel_seri, pel_meteran=:pel_meteran, pel_aktif=:pel_aktif";
+                 SET gol_id=:gol_id, pel_no=:pel_no, pel_name=:pel_name, pel_alamat=:pel_alamat, pel_hp=:pel_hp
+                 , pel_ktp=:pel_ktp, pel_seri=:pel_seri, pel_meteran=:pel_meteran, pel_aktif=:pel_aktif, user_id=:user_id";
+
+          // Instantiate $stmt
           $stmt = $this->db->prepare($sql);
 
-          $stmt->bindParam(":pel_id_gol", $pel_id_gol);
+          $stmt->bindParam(":gol_id", $gol_id);
+          $stmt->bindParam(":pel_no", $pel_no);
           $stmt->bindParam(":pel_name", $pel_name);
           $stmt->bindParam(":pel_alamat", $pel_alamat);
           $stmt->bindParam(":pel_hp", $pel_hp);
@@ -62,10 +67,9 @@ class Post extends Model
           $stmt->bindParam(":pel_seri", $pel_seri);
           $stmt->bindParam(":pel_meteran", $pel_meteran);
           $stmt->bindParam(":pel_aktif", $pel_aktif);
-
+          $stmt->bindParam(":user_id", $user_id);
           $stmt->execute();
      }
-
      public function edit($id)
      {
           $query = "SELECT * FROM tb_pelanggan WHERE pel_id=:pel_id";
@@ -79,7 +83,8 @@ class Post extends Model
 
      public function update()
      {
-          $pel_id_gol = $_POST['pel_id_gol'];
+          $gol_id = $_POST['gol_id'];
+          $pel_no = $_POST['pel_no'];
           $pel_name = $_POST['pel_name'];
           $pel_alamat = $_POST['pel_alamat'];
           $pel_hp = $_POST['pel_hp'];
@@ -87,16 +92,19 @@ class Post extends Model
           $pel_seri = $_POST['pel_seri'];
           $pel_meteran = $_POST['pel_meteran'];
           $pel_aktif = $_POST['pel_aktif'];
+          $user_id = $_POST['user_id'];
           $id = $_POST['id'];
 
           $sql = "UPDATE tb_pelanggan
-                  SET pel_id_gol=:pel_id_gol, pel_name=:pel_name, pel_alamat=:pel_alamat, pel_hp=:pel_hp
-                  , pel_ktp=:pel_ktp, pel_seri=:pel_seri, pel_meteran=:pel_meteran, pel_aktif=:pel_aktif
-                  WHERE pel_id=:pel_id";
+            SET gol_id=:gol_id, pel_no=:pel_no, pel_name=:pel_name, pel_alamat=:pel_alamat, pel_hp=:pel_hp
+            , pel_ktp=:pel_ktp, pel_seri=:pel_seri, pel_meteran=:pel_meteran, pel_aktif=:pel_aktif, user_id=:user_id
+            WHERE pel_id=:pel_id";
 
+          // Instantiate $stmt
           $stmt = $this->db->prepare($sql);
 
-          $stmt->bindParam(":pel_id_gol", $pel_id_gol);
+          $stmt->bindParam(":gol_id", $gol_id);
+          $stmt->bindParam(":pel_no", $pel_no);
           $stmt->bindParam(":pel_name", $pel_name);
           $stmt->bindParam(":pel_alamat", $pel_alamat);
           $stmt->bindParam(":pel_hp", $pel_hp);
@@ -104,11 +112,12 @@ class Post extends Model
           $stmt->bindParam(":pel_seri", $pel_seri);
           $stmt->bindParam(":pel_meteran", $pel_meteran);
           $stmt->bindParam(":pel_aktif", $pel_aktif);
+          $stmt->bindParam(":user_id", $user_id);
           $stmt->bindParam(":pel_id", $id);
 
+          // Execute the statement
           $stmt->execute();
      }
-
      public function delete($id)
      {
           $sql = "DELETE FROM tb_pelanggan WHERE pel_id=:pel_id";
