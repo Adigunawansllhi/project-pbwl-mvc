@@ -1,4 +1,4 @@
-<h2>Pelanggan</h2>
+<h2 class="mt-3"><i class="fas fa-users"></i> Pelanggan</h2>
 
 <a href="<?php echo URL; ?>/posts/input" class="btn mt-3" style="background-color:#eebbc3;"><i class="fas fa-plus-circle"></i> Input Pelangan</a>
 <table id="dtb">
