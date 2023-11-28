@@ -1,6 +1,6 @@
-<h2>Users</h2>
+<h2 class="mt-3"><i class="fas fa-user"></i> Users</h2>
 
-<a href="<?php echo URL; ?>/users/input" class="btn" style="background-color:#eebbc3;"><i class="fas fa-plus-circle"></i> Input Golongan</a>
+<a href="<?php echo URL; ?>/users/input" class="btn mt-3" style="background-color:#eebbc3;"><i class="fas fa-plus-circle"></i> Input Golongan</a>
 
 <table id="dtb">
       <thead>
