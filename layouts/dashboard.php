@@ -8,7 +8,7 @@
 	<meta name="author" content="Suendri">
 
 	<title>Eid Mubarak Blog | PBWL Project10</title>
-	<link rel="shortcut icon" href="<?php echo AST; ?>/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="<?php echo AST; ?>/img/logo2.png" type="image/x-icon">
 	<link rel="stylesheet" href="<?php echo AST; ?>/datatables/datatables.min.css">
 	<link rel="stylesheet" href="<?php echo AST; ?>/css/style.css">
 	<script src="<?php echo AST; ?>/datatables/datatables.min.js"></script>
