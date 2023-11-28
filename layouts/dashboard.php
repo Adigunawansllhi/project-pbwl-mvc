@@ -66,7 +66,7 @@
 		</article>
 
 		<footer>
-			Copyright &copy; 2022 - <?php echo date('Y'); ?>. Designed by Mr. Sue
+			Copyright &copy; 2022 - <?php echo date('Y'); ?>. Desain by <a href="https://github.com/Adigunawansllhi">Adi Gunawan Silalahi </a>
 		</footer>
 	</main>
 
