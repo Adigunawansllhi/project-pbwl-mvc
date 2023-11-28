@@ -1,12 +1,12 @@
-<div class="card p-3">
+<div class="card p-3" style="background-color : #f8f8f8">
     <div class="card-header">
         <h5>Input Pelanggan</h5>
     </div>
-    <form class="row g-3 mt-3 mb-3">
+    <form action="<?php echo URL; ?>/posts/save" method="post" class="row g-3 mt-3 mb-3">
         <div class="col-md-6">
             <label for="inputState" class="form-label">Golongan</label>
-            <select id="inputState" class="form-select">
-                <option selected>Pilih Golongan</option>\
+            <select id="inputState" class="form-select" name="gol_id">
+                <option selected>Pilih Golongan</option>
                 <?php foreach ($data['optcat'] as $opt) { ?>
                     <option value="<?php echo $opt['gol_id']; ?>"><?php echo $opt['gol_name']; ?></option>
                 <?php } ?>
@@ -43,80 +43,22 @@
         <div class="col-md-4">
             <label for="inputState" class="form-label">Pilih status</label>
             <select id="inputState" class="form-select" name="pel_aktif">
-                <option selected>Pilih Status</option>
-                <option>Ya</option>
-                <option>Tidak</option>
+                <option value="" selected>Pilih Status</option>
+                <option value="Y">Ya</option>
+                <option value="N">Tidak</option>
             </select>
         </div>
         <div class="col-md-4">
-            <label for="inputState" class="form-label">Golongan</label>
-            <select id="inputState" class="form-select" name="gol_id">
+            <label for="inputState" class="form-label">User</label>
+            <select id="inputState" class="form-select" name="user_id">
                 <option selected>Pilih User</option>
-                <?php foreach ($data['optUser'] as $opt) { ?>
+                <?php foreach ($data['optuser'] as $opt) { ?>
                     <option value="<?php echo $opt['user_id']; ?>"><?php echo $opt['user_name']; ?></option>
                 <?php } ?>
             </select>
         </div>
-        <button class="btn m-3" style="background-color : #eebbc3; color : #121629" type="submit" name="btn_save">Submit</button>
+        <div class="col-md-12 mt-3">
+            <button class="btn" style="background-color: #eebbc3; color: #121629" type="submit" name="btn_save">Submit</button>
+        </div>
     </form>
 </div>
-
-
-
-
-
-<!-- <h2>Input Post</h2>
-
-<form action="<?php echo URL; ?>/posts/save" method="post">
-    <table>
-        <tr>
-            <td>GOLONGAN</td>
-            <td>
-                <select name="pel_id_gol">
-                    <?php foreach ($data['optcat'] as $opt) { ?>
-                        <option value="<?php echo $opt['gol_id']; ?>"><?php echo $opt['gol_name']; ?></option>
-                    <?php } ?>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>NAMA</td>
-            <td><input type="text" name="pel_name" required></td>
-        </tr>
-        <tr>
-            <td>ALAMAT</td>
-            <td>
-                <textarea name="pel_alamat" cols="30" rows="10"></textarea>
-            </td>
-        </tr>
-        <tr>
-        <td>NO HP</td>
-            <td><input type="text" name="pel_hp" required></td>
-        </tr>
-        <tr>
-            <td>NO KTP</td>
-            <td><input type="text" name="pel_ktp" required></td>
-        </tr>
-        <tr>
-            <td>SERI</td>
-            <td><input type="text" name="pel_seri" required></td>
-        </tr>
-        <tr>
-            <td>METERAN</td>
-            <td><input type="text" name="pel_meteran" required></td>
-        </tr>
-        <tr>
-            <td>STATUS AKTIF</td>
-            <td>
-                <select name="pel_aktif">
-                        <option value="Y">YA</option>
-                        <option value="N">TIDAK</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" name="btn_save" value="SAVE"></td>
-        </tr>
-    </table>
-</form> -->
