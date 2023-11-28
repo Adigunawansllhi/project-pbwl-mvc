@@ -8,7 +8,7 @@
 	<meta name="author" content="Suendri">
 	<title>Pemrograman Berbasis Web Lanjutan | Project11</title>
 
-	<link rel="shortcut icon" href="<?php echo AST; ?>/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="<?php echo AST; ?>/img/logo2.png" type="image/x-icon">
 	<style>
 		body {
 			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
