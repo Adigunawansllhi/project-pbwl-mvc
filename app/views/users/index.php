@@ -11,6 +11,8 @@
                   <th>ALAMAT</th>
                   <th>NO HP</th>
                   <th>POS</th>
+                  <th>ROLE</th>
+                  <th>AKTIF</th>
                   <th>AKSI</th>
             </tr>
       </thead>
@@ -24,7 +26,9 @@
                   <td><?php echo $row['user_alamat']; ?></td>
                   <td><?php echo $row['user_hp']; ?></td>
                   <td><?php echo $row['user_pos']; ?></td>
-                  <td>
+                  <td><?php echo $row['user_role']; ?></td>
+                  <td><?php echo $row['user_aktif']; ?></td>
+                  <td class="d-flex gap-2">
                         <a href="<?php echo URL; ?>/users/edit/<?php echo $row['user_id']; ?>" class="btn btn-info"><i class="fas fa-edit"></i></a>
                         <a href="<?php echo URL; ?>/users/delete/<?php echo $row['user_id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fas fa-trash"></i></a>
                   </td>
