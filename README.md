@@ -1,4 +1,4 @@
-## Praktikum SI-MVC Pemrograman Berbasis Web Lanjutan 2021/2022
+## Praktikum SI-MVC Pemrograman Berbasis Web Lanjutan 2022/2023
 ## Instalasi 
 * Sebelum melakukan pengujian, harap melakukan instalasi melalui terminal di vscode
 * Dengan mengetikkan "composer install"
