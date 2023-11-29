@@ -1,6 +1,11 @@
 ## Praktikum SI-MVC Pemrograman Berbasis Web Lanjutan 2021/2022
+## Instalasi 
+* Sebelum melakukan pengujian, harap melakukan instalasi melalui terminal di vscode
+* Dengan mengetikkan "composer install"
+* Username = admin123@gmail.com
+* Password = admin
 ## Buat Folder _db serta file didalamnya
-* database.sql
+* db_mvc.sql
 ## Buat Folder app serta empat folder didalamnya
 * controllers
 * core
