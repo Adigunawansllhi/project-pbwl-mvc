@@ -9,10 +9,12 @@ class Post extends Model
 
      public function show()
      {
-          $query = "SELECT * FROM tb_pelanggan 
-          INNER JOIN tb_golongan ON tb_pelanggan.gol_id = tb_golongan.gol_id
-          INNER JOIN tb_users ON tb_pelanggan.user_id = tb_users.user_id
-          ORDER BY pel_id";
+          $query = "SELECT p.*, g.*, u.*
+          FROM tb_pelanggan p
+          INNER JOIN tb_golongan g ON p.gol_id = g.gol_id
+          INNER JOIN tb_users u ON p.user_id = u.user_id
+          ORDER BY p.pel_id";
+
 
           $stmt = $this->db->prepare($query);
           $stmt->execute();
