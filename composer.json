@@ -1,11 +1,11 @@
 {
-    "name": "suendri-uinsu/pbwl-project11",
-    "description": "Praktikum pbwl-project11 Pemrograman Berbasis Web Lanjutan",
+    "name": "Adignwansllhi/pbwl-project10",
+    "description": "Praktikum pbwl-project10 Pemrograman Berbasis Web Lanjutan",
     "type": "project",
     "authors": [
         {
-            "name": "suendri-uinsu",
-            "email": "suendri@uinsu.ac.id"
+            "name": "Adignwansllhi",
+            "email": "adigunawansilalahi@gmail.com"
         }
     ],
     "autoload": {
